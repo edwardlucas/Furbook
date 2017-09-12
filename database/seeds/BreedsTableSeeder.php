@@ -5,6 +5,8 @@
  * Date: 2017/9/12
  * Time: 21:37
  */
+use Illuminate\Database\Seeder;
+
 class BreedsTableSeeder extends Seeder {
     public function run() {
         DB::table('breeds')->insert([
