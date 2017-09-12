@@ -5,4 +5,4 @@ Route::get('/', function() {
 
 Route::get('cats/{id}', function($id) {
     return sprintf('Cat #%s', $id);
-});
+})->where('id', '[0-9]+');
