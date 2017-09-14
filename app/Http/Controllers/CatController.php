@@ -26,7 +26,7 @@ class CatController extends Controller
      */
     public function create()
     {
-        //新建一只猫
+        //新建一只猫的表单
         return view('cats.create');
     }
 
