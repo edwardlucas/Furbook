@@ -26,6 +26,7 @@ class CreateBreedsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('cats');
         Schema::dropIfExists('breeds');
     }
 }

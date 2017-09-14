@@ -19,7 +19,7 @@ class CreateCatsTable extends Migration
             $table->date('date_of_birth');
             $table->integer('breed_id')->unsigned()->nullable();
             $table->foreign('breed_id')->references('id')->on('breeds');
-            $table->timestamps();
+            $table->timestamps(); //会自动增加创建时间和更新时间两个列
         });
     }
 
