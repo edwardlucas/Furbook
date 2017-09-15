@@ -19,6 +19,7 @@ class CreateCatsTable extends Migration
             $table->date('date_of_birth');
             $table->integer('breed_id')->unsigned()->nullable();
             $table->foreign('breed_id')->references('id')->on('breeds');
+            $table->softDeletes(); //采用soft delete需要创建delete_at列
             $table->timestamps(); //会自动增加创建时间和更新时间两个列
         });
     }

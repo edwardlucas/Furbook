@@ -15,7 +15,9 @@ class CatController extends Controller
     public function index()
     {
         //列出所有猫
-        $cats = \Furbook\Cat::all();
+        $cats = \Furbook\Cat::all();                  //列出所有猫
+        //$cats = \Furbook\Cat::withTrashed()->get();   //soft delete模式下，包括已经删除的猫
+        //$cats = \Furbook\Cat::onlyTrashed()->get();     //soft delete模式下，只列出已经删除的猫
         return view('cats.index')->with('cats', $cats);
     }
 
