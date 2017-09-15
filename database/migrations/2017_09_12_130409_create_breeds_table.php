@@ -16,6 +16,7 @@ class CreateBreedsTable extends Migration
         Schema::create('breeds', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('breed_profile_id')->unsigned()->nullable();
         });
     }
 

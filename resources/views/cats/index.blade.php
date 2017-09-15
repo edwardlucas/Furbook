@@ -36,7 +36,7 @@ No talks this day.
         <div class="cat">
             <a href="{{ url('cats/'.$cat->id) }}">
                 <strong>{{ $cat->name }}</strong> - {{ $cat->breed->name }}
-            </a>
+            </a> {{ $cat->breed->breedProfile->Country }} {{ $cat->breed->breedProfile->brief }}
         </div>
     @empty
         <div class="alert">

@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 class BreedProfile extends Model
 {
     public $timestamps = false; //不需要默认的 created_at 和 updated_at
+    //public $table = 'breedprofiles'; //默认会去找 breed_profiles 表
     public function breed()
     {
         return $this->belongsTo('Furbook\Breed');
