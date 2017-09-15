@@ -15,4 +15,9 @@ class Breed extends Model {
     public function cats() {
         return $this->hasMany('Furbook\Cat');
     }
+    //P55, Breed和BreedProfile一对一关系
+    public function breedProfile()
+    {
+        return $this->hasOne('Furbook\BreedProfile');
+    }
 }
