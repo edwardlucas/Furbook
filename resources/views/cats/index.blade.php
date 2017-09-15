@@ -34,9 +34,11 @@ No talks this day.
     --}}
     @forelse ($cats as $cat)
         <div class="cat">
-            <a href="{{ url('cats/'.$cat->id) }}">
+            <a href="{{ url('cats/'.$cat->id) }}" class="glyphicon-link">
                 <strong>{{ $cat->name }}</strong> - {{ $cat->breed->name }}
-            </a> {{ $cat->breed->breedProfile->Country }} {{ $cat->breed->breedProfile->brief }}
+            </a>
+            <div class="well-sm"><p>品种产地： {{ $cat->breed->breedProfile->Country }}</p> <p>品种简介：{{ $cat->breed->breedProfile->brief }}</p>
+            </div>
         </div>
     @empty
         <div class="alert">

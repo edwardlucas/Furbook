@@ -13,6 +13,9 @@
     {!! Form::open(['url' => '/cats/'.$cat->id, 'method' => 'delete']) !!}
     {!! Form::submit('删除'.$cat->name.' Delete Cat', ['class' => 'btn btn-primary']) !!}
     {!! Form::close() !!}
+    <a href="{{ url('cats/create') }}" class="btn btn-primary pull-right">
+        Add a new cat
+    </a>
     <p class="blockquote">Last edited: {{ $cat->updated_at->diffForHumans() }}</p>
 @stop
 @section('content')
